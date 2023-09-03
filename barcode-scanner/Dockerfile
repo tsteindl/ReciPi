@@ -1,10 +1,11 @@
 #Python base image from https://hub.docker.com/r/arm32v7/python/
-FROM arm32v7/python:3.11.5-bullseye
+# FROM arm32v7/python:3.7-bullseye
+FROM rpiguru/docker-python3-opencv-arm:armv7hf-latest
 
 #like 'cd' command
 WORKDIR /app 
 
-RUN apt-get update && apt install -y
+# RUN apt-get update && apt install -y
     # sense-hat \
     # python-smbus \
     # i2c-tools
@@ -30,4 +31,4 @@ COPY . .
 #EXPOSE 8080
 
 # Trigger Python script
-CMD ["python", "./barcode-scanner/sense_hat.py"]
+CMD ["python", "sense_hat.py"]

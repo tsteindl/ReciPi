@@ -3,14 +3,14 @@ services:
   barcode-scanner:
     build: ./barcode-scanner
   
-  db:
-    image: mongo:latest
-    volumes:
-      - db-data:/foo
+  # db:
+    # image: mongo:latest
+    # volumes:
+      # - db-data:/foo
   
-  database-reader:
-    build: ./recipe-creater
+  # database-reader:
+    # build: ./recipe-creater
 
-volumes:
-  db-data:
+# volumes:
+  # db-data:
 

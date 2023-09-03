@@ -1,13 +1,17 @@
-from sense_hat import SenseHat
+# from sense_hat import SenseHat
 import time
 
-sense = SenseHat()
+# sense = SenseHat()
 green = (0, 255, 0)
 
 def show_checkmark():
-    sense.set_pixel(0, 0, green)
+    pass
+    # sense.set_pixel(0, 0, green)
+
+help("modules")
 
 while(True):
-    show_checkmark()
+    # show_checkmark()
     time.sleep(1)
-    sense.clear()
+    # sense.clear()
+    print("hey")
