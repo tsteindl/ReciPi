@@ -1,0 +1,3 @@
+sense-hat
+picamera[array]
+opencv-python
