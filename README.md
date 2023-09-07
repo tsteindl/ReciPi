@@ -1,5 +1,5 @@
 # ReciPi
-ReciPi developed for RaspberryPi 3B+
+ReciPi developed for RaspberryPi 3B+, Ubuntu-Server 23.04 (64-bit)
 
 ## Sources:
 - [How to Install OpenCV on a Raspberry Pi](https://www.youtube.com/watch?v=QzVYnG-WaM4)
