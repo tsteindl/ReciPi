@@ -39,4 +39,8 @@ sudo apt install -y build-essential cmake pkg-config libjpeg-dev libtiff5-dev li
 pip install -r requirements.txt
 ```
 ## SQLite
-- sudo apt install sqlite3
+```
+sudo apt install sqlite3
+
+sqlite3 recipi.db
+```
