@@ -6,7 +6,7 @@ ReciPi developed for RaspberryPi 3B+, Ubuntu-Server 20.04.5 (64-bit)
 - https://en.wikipedia.org/wiki/Barcode
 - https://thepythoncode.com/article/making-a-barcode-scanner-in-python
 - [How to install SQLite](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
-
+- https://ubuntu.com/blog/how-low-can-you-go-running-ubuntu-desktop-on-a-2gb-raspberry-pi-4
 # TODOs
 ## Barcode Scanner
 - install sense hat
@@ -37,6 +37,8 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt install -y build-essential cmake pkg-config libjpeg-dev libtiff5-dev libpng-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libfontconfig1-dev libcairo2-dev libgdk-pixbuf2.0-dev libpango1.0-dev libgtk2.0-dev libgtk-3-dev libatlas-base-dev gfortran libhdf5-dev libhdf5-serial-dev libhdf5-103 libqt5gui5 libqt5webkit5 libqt5test5 python3-pyqt5 python3-dev
 
 pip install -r requirements.txt
+
+sudo apt-get install zbar-tools -y
 ```
 ## SQLite
 ```
@@ -44,3 +46,5 @@ sudo apt install sqlite3
 
 sqlite3 recipi.db
 ```
+- Change path to database in ???.py
+- .open recipi.db
