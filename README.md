@@ -1,5 +1,5 @@
 # ReciPi
-ReciPi developed for RaspberryPi 3B+, Ubuntu-Server 20.04.5 (64-bit)
+ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 
 ## Sources:
 - [How to Install OpenCV on a Raspberry Pi](https://www.youtube.com/watch?v=QzVYnG-WaM4)
@@ -27,7 +27,7 @@ ReciPi developed for RaspberryPi 3B+, Ubuntu-Server 20.04.5 (64-bit)
 
 # How to use
 ## Virtualenv
-- pip install virtualenv
+- sudo pip install virtualenv
 - virtualenv venv
 - . venv/bin/activate
 ## The following are needed for opencv
