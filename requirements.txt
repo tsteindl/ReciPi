@@ -6,3 +6,4 @@ pyzbar
 requests
 asyncio
 aiohttp
+pyppeteer

@@ -6,7 +6,8 @@ ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 - https://en.wikipedia.org/wiki/Barcode
 - https://thepythoncode.com/article/making-a-barcode-scanner-in-python
 - [How to install SQLite](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
-- https://ubuntu.com/blog/how-low-can-you-go-running-ubuntu-desktop-on-a-2gb-raspberry-pi-4
+- [Enable Memory swaping](https://ubuntu.com/blog/how-low-can-you-go-running-ubuntu-desktop-on-a-2gb-raspberry-pi-4)
+- [ChatGPT API Documentation](https://platform.openai.com/docs/guides/gpt)
 # TODOs
 ## Barcode Scanner
 - install sense hat

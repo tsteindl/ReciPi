@@ -6,6 +6,8 @@ sys.path.insert(1, sys.path[0] + "/../")
 from config import DB_PATH, OPEN_EAN_USER_ID
 
 
+strict_ingredients = False
+
 connection = sqlite3.connect(DB_PATH)
 cursor = connection.cursor()
 
@@ -42,10 +44,12 @@ if len(products) == 0:
     exit()
 
 prompt = "Please suggest me a recipe with the following ingredients (id, name), you do not have to use all ingredients.\n"
+if not strict_ingredients:
+    prompt += "Feel free to use different ingredients"
 prompt += ", ".join([f"({id},{name})" for id, name, detailname in products]) + ".\n\n"
 prompt += "These are the recipes I have already cooked:\n"
 prompt += ", ".join([name for id, name in recipes]) + ".\n\n"
-prompt += "Generate your answer in German and in the following format.\n{'name': name of dish, 'ingredients': [[id of first ingredient, name of first ingredient], [id of second ingredient, name of second ingredient], ...]}, 'recipe': the instructions.\n"
+prompt += 'Generate your answer in German and in the following format.\n{"name": name of dish, "ingredients": [[id of first ingredient, name of first ingredient], [id of second ingredient, name of second ingredient], ...]}, "recipe": the instructions.\n'
 prompt += "If you used an ingredient that I did not tell you, use the format (-1, name of the ingredient)"
 
 #api call with prompt
