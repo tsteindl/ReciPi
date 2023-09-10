@@ -3,3 +3,6 @@ picamera[array]
 opencv-python
 imutils
 pyzbar
+requests
+asyncio
+aiohttp

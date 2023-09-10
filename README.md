@@ -17,6 +17,9 @@ ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 - upload to database
 - make script for setting up database
 
+- datamodel with listener on barcode scans that automatically searches products
+- puppeteer to access EAN-search and ChatGPT
+
 ## Data Model
 - checkmark on sensehat
 
