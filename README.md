@@ -21,6 +21,7 @@ ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 - puppeteer to access EAN-search and ChatGPT
 - async requests
 - remember already accessed barcodes
+- improve camera resolution so scanner works
 
 ## Data Model
 - checkmark on sensehat
