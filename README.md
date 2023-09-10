@@ -54,3 +54,4 @@ sqlite3 recipi.db
 ```
 - Change path to database in ???.py
 - .open recipi.db
+- PRAGMA table_info(table_name);
