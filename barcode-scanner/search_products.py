@@ -1,6 +1,8 @@
 import sqlite3
 import sys
 import requests
+import json
+
 sys.path.insert(1, sys.path[0] + "/../")
 from config import DB_PATH, OPEN_EAN_USER_ID
 
@@ -44,10 +46,11 @@ for barcode_id, barcode_data in barcodes:
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
         # The API response content can be accessed using response.text
+        reponse_text = response.text.encode("utf-8").decode("utf-8)")
         print(response.text)
-        if 'error=1' in response.text:
+        if 'error=1' in reponse_text:
             continue
-        elif 'error=0' in response.text:
+        elif 'error=0' in reponse_text:
             """
             error=0
             ---
@@ -64,12 +67,13 @@ for barcode_id, barcode_data in barcodes:
             ---
             """
 
-            api_data = {item[0]: item[1] for item in [row.split("=") for row in response.text.split("\n") if row and row != "---"]}
-            print("Found product: " + api_data)
+            api_data = {item[0]: item[1] for item in [row.split("=") for row in reponse_text.split("\n") if row and row != "---"]}
+            print("Found product: ")
+            print(json.dumps(api_data, indent=4))
             cursor.execute("""
-            INSERT OR IGNORE INTO products
-            (name, detailname, vendor, maincat, subcat, contents, pack, descr, origin, validated, url, barcode_id)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT OR IGNORE INTO products
+                (name, detailname, vendor, maincat, subcat, contents, pack, descr, origin, validated, url, barcode_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 api_data["name"],
                 api_data["detailname"],

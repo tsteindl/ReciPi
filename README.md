@@ -19,6 +19,8 @@ ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 
 - datamodel with listener on barcode scans that automatically searches products
 - puppeteer to access EAN-search and ChatGPT
+- async requests
+- remember already accessed barcodes
 
 ## Data Model
 - checkmark on sensehat
