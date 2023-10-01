@@ -1,5 +1,7 @@
 # ReciPi
-ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
+- ReciPi is a RaspberryPi project that is able to scan Barcodes using the camera module (or any USB camera) from grocery items, retrieve products from public database and store them into a SQLite database. Then user can prompt the program to query ChatGPT (or any other similar project) to generate a recipe. Recipes are also stored so they don't become redundant.
+- Developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
+
 
 ## Sources:
 - [How to Install OpenCV on a Raspberry Pi](https://www.youtube.com/watch?v=QzVYnG-WaM4)
@@ -11,28 +13,12 @@ ReciPi developed for RaspberryPi 3B+, Raspberry OS Lite (64-bit)
 - [Open EAN Database](https://opengtindb.org/)
 - [EAN Search Database](https://www.ean-search.org/)
 # TODOs
-## Barcode Scanner
-- install sense hat
-- install opencv
-- capture image
-- search for product with api call
-- setup database
-- upload to database
-- make script for setting up database
-
 - datamodel with listener on barcode scans that automatically searches products
 - puppeteer to access EAN-search and ChatGPT
 - async requests
 - remember already accessed barcodes
-- improve camera resolution so scanner works
-
-## Data Model
+- improve camera resolution
 - checkmark on sensehat
-
-## Recipe Creater
-- generate ChatGPT Query
-- setup chatgpt API
-- Find way to interact with program 
 
 # How to use
 ## Virtualenv
